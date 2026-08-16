@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" href="ico/PALULDS_Icon.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/ProyectosData.js"></script>
+    <script src="js/Proyectos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/798babe3ea.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>PALULDS — Proyectos</title>
+</head>
+<body>
+
+    <header>
+        <div class="header-logo">
+            <img src="ico/PALULDS_Emoticon01.png" alt="Palulds smiling face icon">
+            <span class="chakra-petch-bold">PALULDS</span>
+        </div>
+        
+        <!-- NAV PC -->
+        <nav class="header-nav">
+            <a href="index.html" class="chakra-petch-regular">Inicio</a>
+            <a href="proyectos.html" class="chakra-petch-regular">Proyectos</a>
+            <a href="galeria.html" class="chakra-petch-regular">Galería</a>
+        </nav>
+
+        <!-- BURGER MÓVIL -->
+        <button class="header-burger" id="header-burger">
+            <span></span><span></span><span></span>
+        </button>
+
+        <!-- NAV MÓVIL -->
+        <div class="header-menu-movil" id="header-menu-movil">
+            <a href="index.html" class="chakra-petch-regular">Inicio</a>
+            <a href="proyectos.html" class="chakra-petch-regular">Proyectos</a>
+            <a href="galeria.html" class="chakra-petch-regular">Galería</a>
+        </div>
+    </header>
+
+    <main style="background-image: url(res/Fondo2.png);">
+        <section id="section">
+            <div class="section-content">
+                <h1>Proyectos</h1>
+                <br>
+                <p class="chakra-petch-regular">Aquí puedes encontrar una lista de los proyectos en los que he trabajado o estoy trabajando actualmente. Algunos son juegos, otros son fanmades, programación, arte o otras chingaderas.</p>
+                <br>
+            </div>
+            <div class="section-content">
+                <!-- BUSCADOR Y FILTROS -->
+                <div class="proyectos-controles">
+                    <input id="proyectos-busqueda" type="text" class="chakra-petch-regular" placeholder="Buscar proyecto...">
+                    <div class="proyectos-filtros">
+                        <button class="proyecto-filtro chakra-petch-regular activo" data-cat="">Todos</button>
+                        <button class="proyecto-filtro chakra-petch-regular" data-cat="Juego">Juego</button>
+                        <button class="proyecto-filtro chakra-petch-regular" data-cat="Fanmade">Fanmade</button>
+                        <button class="proyecto-filtro chakra-petch-regular" data-cat="Programacion">Programación</button>
+                        <button class="proyecto-filtro chakra-petch-regular" data-cat="Arte">Arte</button>
+                        <button class="proyecto-filtro chakra-petch-regular" data-cat="Otro">Otro</button>
+                    </div>
+                </div>
+
+                <!-- GRID -->
+                <div id="proyectos-grid"></div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p class="chakra-petch-regular">Redes:</p>
+        </div>
+        <br>
+        <div class="footer-content">
+            <a href="https://www.youtube.com/@PALULDS" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.twitch.tv/palulds" target="_blank"><i class="fab fa-twitch"></i></a>
+            <a href="https://www.instagram.com/dinoextremofilobrutalextremo/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.deviantart.com/palurds" target="_blank"><i class="fab fa-deviantart"></i></a>
+        </div>
+        <br>
+        <br>
+        <div class="footer-content">
+            <p class="chakra-petch-regular">Este sitio es mi portafolio, un registro de mis proyectos, mi experiencia en desarrollo web y lo que soy capaz de hacer en cuanto a juegos.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
