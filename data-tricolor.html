@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" href="ico/PokemonTricolor_Icon.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/798babe3ea.js" crossorigin="anonymous"></script>
+    <script src="js/pokedata.js"></script>
+    <script src="js/data-pokemon.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>PALULDS - Pokémon</title>
+</head>
+<body>
+
+    <header>
+        <div class="header-logo">
+            <img style="filter: unset;" src="ico/PokemonTricolor_Icon.png" alt="Pokemon Tricolor icon">
+            <span class="chakra-petch-bold">Pokemon Tricolor</span>
+        </div>
+
+        <!-- NAV PC -->
+        <nav class="header-nav">
+            <a href="index.html" class="chakra-petch-regular">Inicio</a>
+            <a href="proyectos.html" class="chakra-petch-regular">Proyectos</a>
+            <a href="galeria.html" class="chakra-petch-regular">Galería</a>
+            <a href="Pokemon-Tricolor.html" class="chakra-petch-regular">Pokémon Tricolor</a>
+            <a href="pokedex-tricolor.html" class="chakra-petch-regular">Pokedex Tricolor</a>
+        </nav>
+
+        <!-- BURGER MÓVIL -->
+        <button class="header-burger" id="header-burger">
+            <span></span><span></span><span></span>
+        </button>
+
+        <!-- NAV MÓVIL -->
+        <div class="header-menu-movil" id="header-menu-movil">
+            <a href="index.html" class="chakra-petch-regular">Inicio</a>
+            <a href="proyectos.html" class="chakra-petch-regular">Proyectos</a>
+            <a href="galeria.html" class="chakra-petch-regular">Galería</a>
+            <a href="Pokemon-Tricolor.html" class="chakra-petch-regular">Pokémon Tricolor</a>
+            <a href="pokedex-tricolor.html" class="chakra-petch-regular">Pokedex Tricolor</a>
+        </div>
+    </header>
+
+    <main style="background-image: url(res/Pokedex-Fondo.png);">
+        <section id="section">
+
+            <!-- NAVEGACIÓN ANTERIOR / SIGUIENTE -->
+            <div class="section-content">
+                <div class="poke-nav" id="poke-nav"></div>
+            </div>
+
+            <br>
+
+            <!-- TÍTULO -->
+            <div class="section-content">
+                <h1 class="chakra-petch-bold poke-titulo" id="poke-titulo"></h1>
+            </div>
+
+            <br>
+
+            <!-- DATOS + ARTWORK -->
+            <div class="section-content">
+                <div class="poke-data-wrap">
+
+                    <!-- IZQUIERDA / MÓVIL ABAJO -->
+                    <div class="poke-data-left">
+                        <div class="poke-tipos-wrap" id="poke-tipos"></div>
+                        <p class="chakra-petch-regular poke-entrada" id="poke-entrada"></p>
+                        <div class="poke-datos-grid" id="poke-datos"></div>
+                    </div>
+
+                    <!-- DERECHA / MÓVIL ARRIBA -->
+                    <div class="poke-data-right">
+                        <div class="poke-artwork-card">
+                            <img class="poke-artwork" id="poke-artwork" src="" alt="">
+                            <div class="poke-artwork-nota chakra-petch-regular" id="poke-artwork-nota"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+
+                <!-- STATS -->
+                <div class="poke-stats-wrap">
+                    <h3 class="chakra-petch-bold poke-stats-titulo">Estadísticas base</h3>
+                    <div class="poke-stats-barras" id="poke-stats-barras"></div>
+                    <br>
+                    <h3 class="chakra-petch-bold poke-stats-titulo">EVs obtenidos</h3>
+                    <div class="poke-evs-tabla" id="poke-evs-tabla"></div>
+                </div>
+                <br>
+
+                <!-- MOVIMIENTOS POR NIVEL -->
+                <div class="poke-movs-wrap">
+                    <h3 class="chakra-petch-bold poke-stats-titulo">Movimientos por nivel</h3>
+                    <div class="poke-movs-tabla" id="poke-movs-nivel"></div>
+                </div>
+                <br>
+
+                <!-- MOVIMIENTOS POR MT -->
+                <div class="poke-movs-wrap">
+                    <h3 class="chakra-petch-bold poke-stats-titulo">Movimientos por MT</h3>
+                    <div class="poke-movs-tabla" id="poke-movs-mt"></div>
+                </div>
+
+                <br>
+
+                <!-- LÍNEA EVOLUTIVA -->
+                <div class="poke-evo-wrap">
+                    <h3 class="chakra-petch-bold poke-stats-titulo">Línea evolutiva</h3>
+                    <div class="poke-evo-linea" id="poke-evo-linea"></div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p class="chakra-petch-regular">Redes:</p>
+        </div>
+        <br>
+        <div class="footer-content">
+            <a href="https://www.youtube.com/@PALULDS" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.twitch.tv/palulds" target="_blank"><i class="fab fa-twitch"></i></a>
+            <a href="https://www.instagram.com/dinoextremofilobrutalextremo/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.deviantart.com/palurds" target="_blank"><i class="fab fa-deviantart"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>

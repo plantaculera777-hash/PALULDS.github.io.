@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="icon" href="ico/PALULDS_Icon.png" type="image/png">
+    <link rel="icon" href="ico/PokemonTricolor_Icon.png" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js"></script>
-    <script src="js/GaleriaData.js"></script>
-    <script src="js/Galeria.js"></script>
     <script src="https://kit.fontawesome.com/798babe3ea.js" crossorigin="anonymous"></script>
+    <script src="js/pokedata.js"></script>
+    <script src="js/pokedex.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>PALULDS - Galería</title>
+    <title>PALULDS - Pokedex Tricolor</title>
 </head>
 <body>
 
     <header>
         <div class="header-logo">
-            <img src="ico/PALULDS_Emoticon01.png" alt="Palulds smiling face icon">
-            <span class="chakra-petch-bold">PALULDS</span>
+            <img style="filter: unset;" src="ico/PokemonTricolor_Icon.png" alt="Pokemon Tricolor icon">
+            <span class="chakra-petch-bold">Pokemon Tricolor</span>
         </div>
 
         <!-- NAV PC -->
@@ -27,6 +27,8 @@
             <a href="index.html" class="chakra-petch-regular">Inicio</a>
             <a href="proyectos.html" class="chakra-petch-regular">Proyectos</a>
             <a href="galeria.html" class="chakra-petch-regular">Galería</a>
+            <a href="Pokemon-Tricolor.html" class="chakra-petch-regular">Pokémon Tricolor</a>
+            <a href="pokedex-tricolor.html" class="chakra-petch-regular">Pokedex Tricolor</a>
         </nav>
 
         <!-- BURGER MÓVIL -->
@@ -39,51 +41,32 @@
             <a href="index.html" class="chakra-petch-regular">Inicio</a>
             <a href="proyectos.html" class="chakra-petch-regular">Proyectos</a>
             <a href="galeria.html" class="chakra-petch-regular">Galería</a>
+            <a href="Pokemon-Tricolor.html" class="chakra-petch-regular">Pokémon Tricolor</a>
+            <a href="pokedex-tricolor.html" class="chakra-petch-regular">Pokedex Tricolor</a>
         </div>
     </header>
 
-    <main style="background-image: url(res/Fondo2.png);">
+    <main style="background-image: url(res/Pokedex-Fondo.png);">
         <section id="section">
             <div class="section-content">
-                <h1>Galería</h1>
-                <br>
-                <p class="chakra-petch-regular">Aquí puedes encontrar una lista de las imágenes que he creado o recopilado. Puedes buscar por categorías o filtrarlas según tu preferencia. Como se muestra en el carrusel hay varios fondos disponibles. Hechos por mi.</p>
-                <br>
+                <h2 class="chakra-petch-bold">Pokedex Tricolor</h2>
+                <p class="chakra-petch-regular">Bienvenido a la Pokedex Tricolor. Aquí encontrarás información detallada sobre todos los Pokémon de la región de Nejico. busca tu favorito seleccionando uno de los tipos para filtrar los resultados.</p>
             </div>
             <div class="section-content">
- 
-                <!-- CARRUSEL -->
-                <div id="carrusel"></div>
- 
-                <!-- BUSCADOR Y FILTROS -->
-                <div class="galeria-controles">
-                    <input id="galeria-busqueda" type="text" class="chakra-petch-regular" placeholder="Buscar imagen...">
-                    <div class="galeria-filtros">
-                        <button class="galeria-filtro chakra-petch-semibold activo" data-cat="">Todos</button>
-                        <button class="galeria-filtro chakra-petch-semibold" data-cat="Fondo">Fondos</button>
-                        <button class="galeria-filtro chakra-petch-semibold" data-cat="Foto">Fotos</button>
+                <!-- CONTROLES -->
+                <div class="pokedex-controles">
+                    <input id="pokedex-busqueda" type="text" class="chakra-petch-regular" placeholder="Buscar Pokémon...">
+                    <div class="pokedex-filtros" id="pokedex-filtros">
+                        <button class="pokedex-filtro chakra-petch-regular activo" data-tipo="">Todos</button>
+                        <!-- los tipos se generan desde JS -->
                     </div>
                 </div>
- 
+
                 <!-- GRID -->
-                <div id="galeria-grid"></div>
- 
+                <div id="pokedex-grid"></div>
             </div>
         </section>
     </main>
- 
-    <!-- MODAL -->
-    <div id="galeria-modal">
-        <div class="modal-contenido">
-            <button class="modal-cerrar chakra-petch-bold" onclick="cerrarModal()">✕</button>
-            <img id="modal-img" src="" alt="">
-            <div class="modal-info">
-                <span id="modal-nombre" class="chakra-petch-regular"></span>
-                <span id="modal-cat"></span>
-                <a id="modal-descarga" class="chakra-petch-semibold modal-descarga-btn" href="" download>⬇ Descargar</a>
-            </div>
-        </div>
-    </div>
 
     <footer>
         <!-- links de redes sociales y información de contacto -->
@@ -96,11 +79,6 @@
             <a href="https://www.twitch.tv/palulds" target="_blank"><i class="fab fa-twitch"></i></a>
             <a href="https://www.instagram.com/dinoextremofilobrutalextremo/" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://www.deviantart.com/palurds" target="_blank"><i class="fab fa-deviantart"></i></a>
-        </div>
-        <br>
-        <br>
-        <div class="footer-content">
-            <p class="chakra-petch-regular">Este sitio es mi portafolio, un registro de mis proyectos, mi experiencia en desarrollo web y lo que soy capaz de hacer en cuanto a juegos.</p>
         </div>
     </footer>
 
