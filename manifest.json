@@ -1,0 +1,22 @@
+{
+  "name": "PALULDS",
+  "short_name": "PALULDS",
+  "description": "Portafolio de PALULDS",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#EC2C2C",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./ico/PALULDS_Icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./ico/PALULDS_Icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
